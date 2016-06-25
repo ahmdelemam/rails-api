@@ -8,9 +8,9 @@ class Ability
     elsif user.user?
       can :read, :all
       can :create, :all
-      can :update, :all#, user_id: user.id
-      can :delete, :all
-      can :destroy, :all
+      can :update, :all, user_id: user.id
+      can :delete, :all, user_id: user.id
+      can :destroy, :all, user_id: user.id
     else
       can :read, :all
     end
